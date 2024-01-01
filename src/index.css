@@ -5,3 +5,22 @@
 html {
     scroll-behavior: smooth;
 }
+
+.card {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: all .3s ease-in;
+}
+
+.flip {
+    transform: rotateY(180deg)
+}
+
+.front, .back, .menu {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
