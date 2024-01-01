@@ -9,15 +9,15 @@ const PageChanger = (props) => {
 
   return (
     <div className="w-4/5 xs:w-[325px] h-10 mx-auto my-10 flex	text-slate-50">
-      {props.page !== 1 ? (
+      {props.page != 1 ? (
         <Link
-          to={props.page !== 1 ? `/cards/${props.page - 1}` : ""}
+          to={props.page != 1 ? `/cards/${props.page - 1}` : ""}
           className="w-1/4 h-full"
           onClick={() => props.setPage(props.page - 1)}
         >
           <button
             className={`w-full h-full flex items-center justify-center border-2 border-white bg-slate-700 rounded-l-lg text-sm font-semibold ${
-              props.page !== "1" ? "hover:bg-white hover:text-black" : ""
+              props.page != 1 ? "hover:bg-white hover:text-black" : ""
             }`}
           >
             <FaArrowLeft className="mr-2" /> Prev
@@ -34,7 +34,7 @@ const PageChanger = (props) => {
       <div className="w-1/2 h-full flex items-center justify-center border-2 border-white bg-white text-black font-semibold">
         Page {props.page} of {props.totalPages}
       </div>
-      {props.page !== props.totalPages ? (
+      {props.page != props.totalPages ? (
         <Link
           to={`/cards/${props.page + 1}`}
           className="w-1/4 h-full"
@@ -42,7 +42,7 @@ const PageChanger = (props) => {
         >
           <button
             className={`w-full h-full flex items-center justify-center border-2 border-white bg-slate-700 rounded-r-lg text-sm font-semibold ${
-              props.page !== props.totalPages
+              props.page != props.totalPages
                 ? "hover:bg-white hover:text-black"
                 : ""
             }`}
