@@ -12,3 +12,4 @@ Currently, two official plugins are available:
 You should write:
 
 >json-server -w data.json -p 5200
+>npm run dev
