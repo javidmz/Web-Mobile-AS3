@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaShare } from "react-icons/fa";
 import AddCard from "./AddCard";
 

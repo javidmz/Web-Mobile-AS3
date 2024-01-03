@@ -29,6 +29,7 @@ const Cards = () => {
   const [isShareIsvisible, setIsShareVisible] = useState(false);
   const [messagesToSend, setMessagesToSend] = useState([]);
   const [isSaveNewOrder, setIsSaveNewOrder] = useState(false);
+  const [searchParameters, setSearchParameters] = useState('&_sort=lastUpdated&_order=desc');
 
   const sensors = useSensors(useSensor(PointerSensor));
 
@@ -96,7 +97,6 @@ const Cards = () => {
   }
 
   const fetchData = async (url) => {
-    console.log(url);
     try {
       const response = await fetch(url);
       if (!response.ok) throw new Error();
@@ -120,28 +120,19 @@ const Cards = () => {
   }, [isSaveNewOrder]);
 
   useEffect(() => {
-    fetchData(
-      sort == "lastUpdated"
-        ? `http://localhost:5200/cards?_limit=6&_page=${page}&_sort=${sort}&_order=desc`
-        : `http://localhost:5200/cards?_limit=6&_page=${page}&_sort=${sort}`
-    );
-  }, [page]);
+    fetchData(`http://localhost:5200/cards?_limit=6&_page=${page}${searchParameters}`);
+  }, [page, searchParameters]);
 
   useEffect(() => {
     let searchParams = "";
     searchParams += filter !== "All" ? "&status=" + filter : "";
     searchParams +=
-      sort !== "None"
-        ? "&_sort=" + sort + sort == "lastUpdated"
-          ? "&_order=desc"
-          : ""
-        : "";
+      sort == "lastUpdated"
+        ? "&_sort=" + sort + "&_order=desc"
+        : "&_sort=" + sort;
     searchParams += search ? "&q=" + search : "";
 
-    console.log(searchParams);
-
-    if(searchParams)
-      fetchData(`http://localhost:5200/cards?_limit=6${searchParams}`);
+    setSearchParameters(searchParams);
   }, [filter, sort, search]);
 
   return (

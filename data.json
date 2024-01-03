@@ -2,38 +2,38 @@
   "cards": [
     {
       "id": 1,
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "status": "Learned",
+      "lastUpdated": "2024/1/2"
+    },
+    {
+      "id": 2,
       "question": "What is the largest ocean in the world?",
       "answer": "Pacific Ocean",
       "lastUpdated": "2023-12-30",
       "status": "Want to Learn"
     },
     {
-      "id": 2,
+      "id": 3,
       "question": "What is the name of the longest river in Africa?",
       "answer": "Nile River",
       "lastUpdated": "2023-12-30",
       "status": "Learned"
     },
     {
-      "id": 3,
+      "id": 4,
       "question": "In what continent is the Amazon Rainforest located?",
       "answer": "South America",
       "lastUpdated": "2023-12-30",
       "status": "Noted"
     },
     {
-      "id": 4,
+      "id": 5,
       "question": "What is the capital of Japan?",
       "answer": "Tokyo",
       "lastUpdated": "2023-12-30",
       "status": "Noted"
-    },
-    {
-      "id": 5,
-      "question": "What is the capital of France?",
-      "answer": "Paris",
-      "status": "Learned",
-      "lastUpdated": "2024/1/2"
     },
     {
       "id": 6,

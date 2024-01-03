@@ -56,7 +56,6 @@ const Card = ({
     const newMessage = messagesToSend.includes(card)
       ? messagesToSend.filter((message) => message.id != card.id)
       : [...messagesToSend, card].sort((a, b) => a.id - b.id);
-    console.log(newMessage);
     setMessagesToSend(newMessage);
   };
 
