@@ -342,7 +342,11 @@
       "id": 1,
       "title": "Unbeatable Tic-Tac-Toe",
       "description": "There is specific algorithm behind this game. Computer can not be defeated by the user. At the end of the game, the result can be either draw, or computer will be winner",
-      "technologies": ["HTML", "CSS", "JavaScript"],
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
       "image": "./src/assets/unbeatable-tic-tac-toe-image.png",
       "link": "https://javidmz.github.io/Unbeatable-Tic-Tac-Toe"
     },
@@ -350,7 +354,12 @@
       "id": 2,
       "title": "Crypto Trade Mafia",
       "description": "By fetching API, we show users current cryptocurrency price. User can view currencies, their price actions, etc. Moreover, by converter user can view the exchange between currencies.",
-      "technologies": ["HTML", "CSS", "JavaScript", "API"],
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "API"
+      ],
       "image": "./src/assets/crypto-trading-mafia-image.png",
       "link": "https://github.com/javidmz/Crypto-Trading-Mafia"
     },
@@ -358,7 +367,10 @@
       "id": 3,
       "title": "Audiophile E-commerce",
       "description": "E-commerce store where users can view products, add these products to their card, confirm their order. By being responsive and user-friendly, project ensures a smooth shopping experience",
-      "technologies": ["ReactJS", "CSS"],
+      "technologies": [
+        "ReactJS",
+        "CSS"
+      ],
       "image": "./src/assets/audiophile-ecommerce-image.png",
       "link": "https://stalwart-sable-5d1135.netlify.app/"
     },
@@ -366,9 +378,14 @@
       "id": 4,
       "title": "Entertainment Web App",
       "description": "A platform where users can select movies to watch. By displaying many top trending, liked movies, we try to pass a good impression to our users",
-      "technologies": ["ReactJS", "Tailwind CSS", "API"],
+      "technologies": [
+        "ReactJS",
+        "Tailwind CSS",
+        "API"
+      ],
       "image": "./src/assets/entertainment-web-app-image.png",
       "link": "https://unrivaled-paprenjak-449b7d.netlify.app/"
     }
-  ]
+  ],
+  "messages": []
 }

@@ -24,3 +24,7 @@ html {
 .back {
     transform: rotateY(180deg);
 }
+
+textarea {
+    resize: none;
+}

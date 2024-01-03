@@ -56,10 +56,7 @@ const CardsBar = ({
           onChange={(e) => setSort(e.target.value)}
           className="outline-none border-2 border-cyan-600 rounded-lg p-2"
         >
-          <option value="None" defaultValue={true}>
-            --None--
-          </option>
-          <option value="lastUpdated">Last Updated</option>
+          <option value="lastUpdated" defaultValue={true}>Last Updated</option>
           <option value="question">Question</option>
           <option value="answer">Answer</option>
         </select>

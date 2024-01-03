@@ -3,7 +3,13 @@ import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import EditCard from "./EditCard";
 
-const Card = ({ card, id, isShareIsvisible, messagesToSend, setMessagesToSend }) => {
+const Card = ({
+  card,
+  id,
+  isShareIsvisible,
+  messagesToSend,
+  setMessagesToSend,
+}) => {
   const [data, setData] = useState(card);
   const cardSettingsRef = useRef();
   const cardRef = useRef();
@@ -36,16 +42,23 @@ const Card = ({ card, id, isShareIsvisible, messagesToSend, setMessagesToSend })
   };
 
   const handleFlip = (e) => {
-    if (menuRef.current && !menuRef.current.contains(e.target) && !isVisible && !shareRef.current) {
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(e.target) &&
+      !isVisible &&
+      !shareRef.current
+    ) {
       setShowAnswer(!showAnswer);
     }
   };
 
   const handleShare = () => {
-    let newMessage = [...messagesToSend, card].sort((a, b) => a.id - b.id);
+    const newMessage = messagesToSend.includes(card)
+      ? messagesToSend.filter((message) => message.id != card.id)
+      : [...messagesToSend, card].sort((a, b) => a.id - b.id);
     console.log(newMessage);
     setMessagesToSend(newMessage);
-  }
+  };
 
   useEffect(() => {
     const handleClickOutsideSettings = (e) => {
@@ -81,7 +94,9 @@ const Card = ({ card, id, isShareIsvisible, messagesToSend, setMessagesToSend })
             style={style}
             {...attributes}
             {...listeners}
-            className={` aspect-square ${isShareIsvisible ? "min-w-[25%]" : " min-w-[30%]"}`}
+            className={` aspect-square ${
+              isShareIsvisible ? "min-w-[25%]" : " min-w-[30%]"
+            }`}
           >
             <div
               ref={cardRef}
@@ -120,7 +135,15 @@ const Card = ({ card, id, isShareIsvisible, messagesToSend, setMessagesToSend })
                   </div>
                 </div>
               )}
-            {isShareIsvisible && <input type="checkbox" ref={shareRef} id={card.id} onMouseDown={handleShare} className="absolute top-2 -left-5 w-5 h-5" />}
+              {isShareIsvisible && (
+                <input
+                  type="checkbox"
+                  ref={shareRef}
+                  id={card.id}
+                  onMouseDown={handleShare}
+                  className="absolute top-2 -left-5 w-5 h-5"
+                />
+              )}
             </div>
           </div>
           {showEdit && (
