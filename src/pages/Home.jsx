@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import MyImage from "../assets/portfolio-img.jpeg";
+import MyImage from "../../public/assets/portfolio-img.jpeg";
 
 const Home = () => {
   const [myProjects, setMyProjects] = useState([]);

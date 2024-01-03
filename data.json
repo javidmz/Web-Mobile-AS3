@@ -347,7 +347,7 @@
         "CSS",
         "JavaScript"
       ],
-      "image": "./src/assets/unbeatable-tic-tac-toe-image.png",
+      "image": "/assets/unbeatable-tic-tac-toe-image.png",
       "link": "https://javidmz.github.io/Unbeatable-Tic-Tac-Toe"
     },
     {
@@ -360,7 +360,7 @@
         "JavaScript",
         "API"
       ],
-      "image": "./src/assets/crypto-trading-mafia-image.png",
+      "image": "/assets/crypto-trading-mafia-image.png",
       "link": "https://github.com/javidmz/Crypto-Trading-Mafia"
     },
     {
@@ -371,7 +371,7 @@
         "ReactJS",
         "CSS"
       ],
-      "image": "./src/assets/audiophile-ecommerce-image.png",
+      "image": "/assets/audiophile-ecommerce-image.png",
       "link": "https://stalwart-sable-5d1135.netlify.app/"
     },
     {
@@ -383,7 +383,7 @@
         "Tailwind CSS",
         "API"
       ],
-      "image": "./src/assets/entertainment-web-app-image.png",
+      "image": "/assets/entertainment-web-app-image.png",
       "link": "https://unrivaled-paprenjak-449b7d.netlify.app/"
     }
   ],
