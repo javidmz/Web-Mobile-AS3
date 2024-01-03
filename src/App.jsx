@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Home from './Home'
-import Cards from './Cards'
-import Contact from './Contact'
-import NotFound from './NotFound'
+import Home from './pages/Home'
+import Cards from './pages/Cards'
+import Contact from './pages/Contact'
+import NotFound from './pages/NotFound'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
+      <Toaster position="top-right" reverseOrder={false} />
     </div>
   )
 }
