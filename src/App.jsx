@@ -5,12 +5,14 @@ import Cards from './pages/Cards'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import { Toaster } from 'react-hot-toast'
+import Navbar from "./components/Navbar"
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div>
+      <Navbar />
       <Routes>
         <Route index element={<Home />} />
         <Route path='/cards' element={<Cards />} />
